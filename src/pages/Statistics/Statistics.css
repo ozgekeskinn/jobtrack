@@ -1,0 +1,156 @@
+.statistics-page {
+  min-height: 650px;
+  padding: 42px 20px 80px;
+  background-color: #0d1017;
+}
+
+.statistics-page_container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.statistics-page_header {
+  margin-bottom: 28px;
+}
+
+.statistics-page_header h1 {
+  margin: 0 0 8px;
+
+  color: #f5f7ff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.statistics-page_header p {
+  margin: 0;
+
+  color: #8d96ab;
+  font-size: 14px;
+}
+
+/* İstatistik kartı */
+
+.statistics-card {
+  padding: 28px 26px 32px;
+
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-radius: 10px;
+}
+
+.statistics-total {
+  margin: 0 0 24px;
+
+  color: #8d96ab;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.statistics-total strong {
+  color: #b4bdd0;
+  font-weight: 600;
+}
+
+.statistics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+/* Her istatistik satırı */
+
+.statistics-item {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 14px;
+}
+
+.statistics-item_label {
+  color: #f0f3fa;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statistics-item_track {
+  width: 100%;
+  height: 14px;
+  overflow: hidden;
+
+  background-color: #1e2430;
+  border-radius: 999px;
+}
+
+.statistics-item_bar {
+  height: 100%;
+  min-width: 0;
+  border-radius: inherit;
+
+  transition: width 0.45s ease;
+}
+
+.statistics-item_count {
+  color: #f5f7ff;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Durum renkleri */
+
+.statistics-bar--saved {
+  background-color: #8f99ad;
+}
+
+.statistics-bar--applied {
+  background-color: #6092f5;
+}
+
+.statistics-bar--hr {
+  background-color: #a37df2;
+}
+
+.statistics-bar--technical {
+  background-color: #f1b82b;
+}
+
+.statistics-bar--offer {
+  background-color: #43d4a0;
+}
+
+.statistics-bar--rejected {
+  background-color: #ff6868;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .statistics-page {
+    padding: 34px 14px 60px;
+  }
+
+  .statistics-card {
+    padding: 22px 18px 26px;
+  }
+
+  .statistics-item {
+    grid-template-columns: 1fr 25px;
+    gap: 8px 12px;
+  }
+
+  .statistics-item_label {
+    grid-column: 1;
+  }
+
+  .statistics-item_count {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .statistics-item_track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

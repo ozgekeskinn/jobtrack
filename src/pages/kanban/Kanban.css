@@ -1,0 +1,251 @@
+.kanban-page {
+  min-height: 650px;
+  padding: 42px 20px 80px;
+  background-color: #0d1017;
+}
+
+.kanban-page_container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.kanban-page_header {
+  margin-bottom: 28px;
+}
+
+.kanban-page_header h1 {
+  margin: 0 0 8px;
+
+  color: #f5f7ff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.kanban-page_header p {
+  margin: 0;
+
+  color: #8d96ab;
+  font-size: 14px;
+}
+
+/* Kanban alanı */
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+/* Kolon */
+
+.kanban-column {
+  min-height: 240px;
+  overflow: hidden;
+
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-top: 3px solid #6092f5;
+  border-radius: 9px;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Kolonların üst renkleri */
+
+.kanban-column:nth-child(1) {
+  border-top-color: #6092f5;
+}
+
+.kanban-column:nth-child(2) {
+  border-top-color: #a679f8;
+}
+
+.kanban-column:nth-child(3) {
+  border-top-color: #f1b82b;
+}
+
+.kanban-column:nth-child(4) {
+  border-top-color: #43d4a0;
+}
+
+.kanban-column_header {
+  min-height: 48px;
+  padding: 13px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kanban-column_header h2 {
+  margin: 0;
+
+  color: #8d96ab;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.kanban-column_header > span {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #9aa5ba;
+  background-color: #1e2430;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Kolon içeriği */
+
+.kanban-column_body {
+  min-height: 180px;
+  padding: 0 12px 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Kart */
+
+.kanban-card {
+  min-height: 88px;
+  padding: 14px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  background-color: #1d222d;
+  border: 1px solid #2a3140;
+  border-radius: 9px;
+
+  cursor: grab;
+  user-select: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+
+  background-color: #202632;
+  border-color: #3a4558;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.kanban-card:active {
+  cursor: grabbing;
+}
+
+.kanban-card_logo {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #111621;
+  background-color: #ef67b5;
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Kartların harf kutularına farklı renkler */
+
+.kanban-column:nth-child(1)
+  .kanban-card:nth-child(2n)
+  .kanban-card_logo {
+  background-color: #6092f5;
+}
+
+.kanban-column:nth-child(2)
+  .kanban-card_logo {
+  background-color: #ff9347;
+}
+
+.kanban-column:nth-child(3)
+  .kanban-card:nth-child(odd)
+  .kanban-card_logo {
+  background-color: #a679f8;
+}
+
+.kanban-column:nth-child(3)
+  .kanban-card:nth-child(even)
+  .kanban-card_logo {
+  background-color: #9c7af5;
+}
+
+.kanban-column:nth-child(4)
+  .kanban-card_logo {
+  background-color: #43d4a0;
+}
+
+.kanban-card_content {
+  min-width: 0;
+}
+
+.kanban-card_content strong {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #f5f7ff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.kanban-card_content p {
+  margin: 0;
+
+  color: #8d96ab;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Sürükleme alanı */
+
+.kanban-column:has(.kanban-card:active) {
+  border-color: #46536a;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .kanban-page {
+    overflow-x: auto;
+  }
+
+  .kanban-board {
+    min-width: 880px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kanban-page {
+    padding: 34px 14px 60px;
+  }
+
+  .kanban-page_header h1 {
+    font-size: 25px;
+  }
+}

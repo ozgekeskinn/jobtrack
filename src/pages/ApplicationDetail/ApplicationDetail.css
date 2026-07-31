@@ -1,0 +1,358 @@
+.application-detail_page {
+  min-height: 650px;
+  padding: 42px 20px 80px;
+  background-color: #0d1017;
+}
+
+.application-detail_container {
+  width: min(560px, 100%);
+  margin: 0 auto;
+}
+
+.application-detail_back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: #8390a8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.application-detail_back-link:hover {
+  color: #f5f7ff;
+}
+
+.application-detail_card {
+  padding: 30px;
+
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-radius: 10px;
+}
+
+.application-detail_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.application-detail_identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.application-detail_logo {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #101521;
+  background-color: #a679f8;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.application-detail_header h1 {
+  margin: 0 0 5px;
+
+  color: #f5f7ff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.application-detail_header p {
+  margin: 0;
+
+  color: #8d96ab;
+  font-size: 14px;
+}
+
+.application-detail_badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  color: #ac81ff;
+  background-color: rgba(153, 105, 240, 0.17);
+
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Süreç çizgisi */
+
+.application-detail_progress {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  margin: 26px auto 32px;
+}
+
+.application-detail_step {
+  position: relative;
+  min-width: 0;
+  text-align: center;
+}
+
+.application-detail_step-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.application-detail_step-circle {
+  position: relative;
+  z-index: 2;
+
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #687287;
+  background-color: #1c2230;
+  border: 2px solid #293142;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.application-detail_step-line {
+  width: 100%;
+  height: 2px;
+  background-color: #293142;
+
+  position: absolute;
+  z-index: 1;
+
+  top: 10px;
+  left: 50%;
+}
+
+.application-detail_step-label {
+  display: block;
+  margin-top: 7px;
+
+  color: #687287;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.application-detail_step--completed
+.application-detail_step-circle {
+  color: #082117;
+  background-color: #42d7a0;
+  border-color: #42d7a0;
+}
+
+.application-detail_step--completed
+.application-detail_step-line {
+  background-color: #42d7a0;
+}
+
+.application-detail_step--current
+.application-detail_step-circle {
+  color: #071021;
+  background-color: #5d8ff5;
+  border-color: #3867b8;
+  box-shadow: 0 0 0 4px rgba(93, 143, 245, 0.14);
+}
+
+.application-detail_step--current
+.application-detail_step-label {
+  color: #f5f7ff;
+  font-weight: 700;
+}
+
+/* Bilgi satırları */
+
+.application-detail_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.application-detail_row {
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-bottom: 1px solid #29303e;
+}
+
+.application-detail_row > span:first-child {
+  color: #8390a8;
+  font-size: 13px;
+}
+
+.application-detail_row strong {
+  color: #f5f7ff;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.application-detail_row a {
+  color: #6092f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.application-detail_row a:hover {
+  color: #82aafa;
+}
+
+.application-detail_notes {
+  padding: 15px 0;
+  border-bottom: 1px solid #29303e;
+}
+
+.application-detail_notes > span {
+  color: #8390a8;
+  font-size: 13px;
+}
+
+.application-detail_notes p {
+  margin: 7px 0 0;
+
+  color: #f5f7ff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Alt işlemler */
+
+.application-detail_actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-top: 16px;
+  border-top: none;
+}
+
+.application-detail_status-select {
+  min-width: 145px;
+  height: 42px;
+  padding: 0 12px;
+
+  color: #f5f7ff;
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.application-detail_status-select:focus {
+  border-color: #5d8ff5;
+  box-shadow: 0 0 0 3px rgba(93, 143, 245, 0.12);
+}
+
+.application-detail_delete-button {
+  height: 42px;
+  padding: 0 24px;
+
+  color: #f5f7ff;
+  background-color: transparent;
+  border: 1px solid #293142;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.application-detail_delete-button:hover {
+  color: #ff7676;
+  border-color: rgba(255, 104, 104, 0.45);
+  background-color: rgba(255, 104, 104, 0.08);
+}
+
+
+.application-detail_actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-top: 16px;
+  border-top: 1px solid #29303e;
+}
+
+.application-detail_status-select {
+  min-width: 130px;
+  height: 38px;
+  padding: 0 12px;
+
+  color: #f5f7ff;
+  background-color: #171b25;
+  border: 1px solid #5d8ff5;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.application-detail_status-select:focus {
+  border-color: #74a0ff;
+  box-shadow: 0 0 0 3px rgba(93, 143, 245, 0.12);
+}
+
+.application-detail_delete-button {
+  height: 38px;
+  padding: 0 22px;
+
+  color: #f5f7ff;
+  background-color: transparent;
+  border: 1px solid #293142;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.application-detail_delete-button:hover {
+  color: #ff7676;
+  border-color: rgba(255, 104, 104, 0.45);
+  background-color: rgba(255, 104, 104, 0.08);
+}
+
+@media (max-width: 600px) {
+  .application-detail_page {
+    padding: 32px 14px 60px;
+  }
+
+  .application-detail_card {
+    padding: 20px;
+  }
+
+  .application-detail_header {
+    flex-direction: column;
+  }
+
+  .application-detail_step-label {
+    font-size: 8px;
+  }
+}

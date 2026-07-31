@@ -1,0 +1,27 @@
+.add-application {
+    min-height: 600px;
+    padding: 60px 20px 80px;
+    background-color: #0d1017;
+}
+
+.add-application_container {
+    width: min(480px, 100%);
+    margin: 0 auto;
+}
+
+.add-application_header {
+    margin-bottom: 24px;
+}
+
+.add-application_header h1 {
+    margin: 0 0 8px;
+    color: #f5f7ff;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.add-application_header p {
+    margin: 0;
+    color: #8d96ab;
+    font-size: 14px;
+}

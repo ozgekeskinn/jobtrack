@@ -1,0 +1,346 @@
+.dashboard-page {
+  min-height: 650px;
+  padding: 42px 20px 80px;
+  background-color: #0d1017;
+}
+
+.dashboard-page_container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+/* Header */
+
+.dashboard-page_header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.dashboard-page_header h1 {
+  margin: 0 0 7px;
+  color: #f5f7ff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dashboard-page_header p {
+  margin: 0;
+  color: #8d96ab;
+  font-size: 14px;
+}
+
+.dashboard-page_header .dashboard-page_add-button,
+.dashboard-empty .dashboard-page_add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 19px;
+
+  color: #08101f;
+  background-color: #6092f5;
+  border: none;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dashboard-page_header .dashboard-page_add-button:hover,
+.dashboard-empty .dashboard-page_add-button:hover {
+  color: #08101f;
+  background-color: #79a3f8;
+}
+
+/* İstatistik kartları */
+
+.dashboard-stats {
+  margin-bottom: 34px;
+}
+
+.dashboard-stat-card {
+  height: 100%;
+
+  color: #f5f7ff;
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-left: 3px solid var(--stat-accent);
+  border-radius: 9px;
+
+  --bs-card-bg: #171b25;
+  --bs-card-color: #f5f7ff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--stat-accent);
+}
+
+.dashboard-stat-card .card-body {
+  padding: 18px;
+}
+
+.dashboard-stat-card_top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboard-stat-card_top strong {
+  color: var(--stat-accent);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.dashboard-stat-card_icon {
+  width: 29px;
+  height: 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--stat-accent);
+  background-color: var(--stat-soft);
+  border-radius: 7px;
+}
+
+.dashboard-stat-card p {
+  margin: 18px 0 0;
+  color: #8d96ab;
+  font-size: 13px;
+}
+
+.dashboard-stat-card--total {
+  --stat-accent: #f5f7ff;
+  --stat-soft: rgba(245, 247, 255, 0.12);
+}
+
+.dashboard-stat-card--saved {
+  --stat-accent: #9aa5ba;
+  --stat-soft: rgba(154, 165, 186, 0.16);
+}
+
+.dashboard-stat-card--applied {
+  --stat-accent: #6092f5;
+  --stat-soft: rgba(96, 146, 245, 0.17);
+}
+
+.dashboard-stat-card--interview {
+  --stat-accent: #f1b51c;
+  --stat-soft: rgba(241, 181, 28, 0.16);
+}
+
+.dashboard-stat-card--offer {
+  --stat-accent: #43d4a0;
+  --stat-soft: rgba(67, 212, 160, 0.16);
+}
+
+.dashboard-stat-card--rejected {
+  --stat-accent: #ff6464;
+  --stat-soft: rgba(255, 100, 100, 0.15);
+}
+
+/* Son başvurular */
+
+.dashboard-recent h2 {
+  margin: 0 0 14px;
+  color: #f5f7ff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.dashboard-recent_list {
+  overflow: hidden;
+
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-radius: 9px;
+}
+
+.dashboard-recent_item {
+  min-height: 74px;
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  color: inherit;
+  border-bottom: 1px solid #29303e;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-recent_item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-recent_item:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+.dashboard-recent_identity {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.dashboard-recent_logo {
+  width: 35px;
+  height: 35px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #101521;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dashboard-recent_logo--0 {
+  background-color: #a679f8;
+}
+
+.dashboard-recent_logo--1 {
+  background-color: #ef67b5;
+}
+
+.dashboard-recent_logo--2 {
+  background-color: #9c7af5;
+}
+
+.dashboard-recent_logo--3 {
+  background-color: #ff6464;
+}
+
+.dashboard-recent_logo--4 {
+  background-color: #5d8ff5;
+}
+
+.dashboard-recent_identity h3 {
+  margin: 0 0 5px;
+  color: #f5f7ff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dashboard-recent_identity p {
+  margin: 0;
+  overflow: hidden;
+
+  color: #8591a8;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Durum badge'leri */
+
+.dashboard-status {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-status--saved {
+  color: #adb6c7;
+  background-color: rgba(173, 182, 199, 0.13);
+}
+
+.dashboard-status--applied {
+  color: #6699ff;
+  background-color: rgba(70, 125, 235, 0.17);
+}
+
+.dashboard-status--interview {
+  color: #ad82ff;
+  background-color: rgba(153, 105, 240, 0.17);
+}
+
+.dashboard-status--technical {
+  color: #f2b91f;
+  background-color: rgba(242, 185, 31, 0.15);
+}
+
+.dashboard-status--offer {
+  color: #4fd49b;
+  background-color: rgba(79, 212, 155, 0.15);
+}
+
+.dashboard-status--rejected {
+  color: #ff6868;
+  background-color: rgba(255, 104, 104, 0.14);
+}
+
+/* Boş durum */
+
+.dashboard-empty {
+  padding: 60px 24px;
+
+  text-align: center;
+  background-color: #171b25;
+  border: 1px solid #293142;
+  border-radius: 9px;
+}
+
+.dashboard-empty h3 {
+  margin: 0 0 8px;
+  color: #f5f7ff;
+}
+
+.dashboard-empty p {
+  margin: 0 0 20px;
+  color: #8d96ab;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .dashboard-page {
+    padding: 34px 14px 60px;
+  }
+
+  .dashboard-page_header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dashboard-page_header .dashboard-page_add-button {
+    width: 100%;
+  }
+
+  .dashboard-recent_item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-status {
+    margin-left: 48px;
+  }
+}
